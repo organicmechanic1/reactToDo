@@ -1,4 +1,5 @@
 import React from 'react'
+import {addItem} from '../api/todo'
  
  const styles = {
  	inputs: {
@@ -19,7 +20,7 @@ export default React.createClass({
 	},
 	handleSubmit(e){
     e.preventDefault()
-    this.props.updateList(this.state.task)
+    addItem(this.state.task)
     this.setState({
     	task: ''
     })
